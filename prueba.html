@@ -1,0 +1,267 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Página de Inicio de Sesión</title>
+    <style>
+    body {
+        font-family: Arial, sans-serif;
+        background: linear-gradient(135deg, #0073e6, #00b8e6);
+        background-size: cover;
+        background-repeat: no-repeat;
+        text-align: center;
+        margin: 0;
+        padding: 0;
+        height: 100vh;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    h2 {
+        color: #fff;
+        font-size: 24px;
+        margin-bottom: 20px;
+    }
+
+    #loginForm {
+        width: 320px;
+        padding: 20px;
+        background-color: #fff;
+        border-radius: 8px;
+        box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);
+        text-align: left;
+        transition: transform 0.3s ease-in-out;
+    }
+
+    #loginForm:hover {
+        transform: scale(1.05);
+    }
+
+    #loginText {
+        color: #0073e6;
+        font-weight: bold;
+        margin-bottom: 20px;
+    }
+
+    label {
+        display: block;
+        margin-bottom: 5px;
+    }
+
+    input[type="text"],
+    input[type="password"] {
+        width: 100%;
+        padding: 8px;
+        margin-bottom: 10px;
+        border: 1px solid #ccc;
+        border-radius: 5px;
+    }
+
+    button {
+        background-color: #0073e6;
+        color: #fff;
+        border: none;
+        padding: 10px 20px;
+        border-radius: 5px;
+        cursor: pointer;
+        transition: background-color 0.3s ease;
+    }
+
+    button:hover {
+        background-color: #0056b3;
+    }
+
+    #message {
+        color: red;
+        margin-top: 10px;
+    }
+
+    #loggedInContent {
+        display: none;
+    }
+
+    h1 {
+        text-align: center;
+        margin-top: 20px;
+        color: #fff;
+    }
+
+    ul {
+        list-style: none;
+        padding: 0;
+        margin: 20px auto;
+        width: 80%;
+        background-color: #fff;
+        box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.1);
+        border-radius: 5px;
+    }
+
+    li {
+        padding: 10px 20px;
+        border-bottom: 1px solid #d5e5f0;
+        transition: background-color 0.3s;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    li:last-child {
+        border-bottom: none;
+    }
+
+    .channel-info {
+        display: flex;
+        align-items: center;
+    }
+
+    .channel-logo {
+        width: 50px;
+        height: auto;
+        margin-right: 10px;
+    }
+
+    .channel-name {
+        color: #4287f5;
+        font-weight: bold;
+    }
+
+    .channel-button {
+        background-color: #3b5bdb;
+        color: #fff;
+        border: none;
+        padding: 8px 15px;
+        cursor: pointer;
+        border-radius: 5px;
+        transition: background-color 0.3s;
+    }
+
+    .channel-button:hover {
+        background-color: #364fc7;
+    }
+</style>
+
+</head>
+<body>
+    
+
+    <div>
+        <!-- Contenido después del inicio de sesión aquí -->
+        <h1>Canales de Transmisión de La Liga</h1>
+        <ul>
+            
+                <li>
+                    <div class="channel-info">
+                        <img class="channel-logo" src="https://upload.wikimedia.org/wikipedia/commons/1/15/LaLigaTV_por_Movistar_Plus%2B_2023_Logo.svg" alt="Logo Movistar LaLiga">
+                        <span class="channel-name">Movistar LaLiga</span>
+                    </div>
+                    <button class="channel-button" onclick="openUrl('acestream://7d8c87e057be98f00f22e23b23fbf08999e4b02f')">Ver</button>
+                </li>
+                <li>
+                    <div class="channel-info">
+                        <img class="channel-logo" src="https://upload.wikimedia.org/wikipedia/commons/thumb/d/d9/LaLiga_Hypermotion_2023_Vertical_Logo.svg/512px-LaLiga_Hypermotion_2023_Vertical_Logo.svg.png?20230705085218" alt="Logo Liga Hipermotion">
+                        <span class="channel-name">Liga Hypermotion</span>
+                    </div>
+                    <button class="channel-button" onclick="openUrl('acestream://4c46585214b23b1d802ef2168060c7649a3894cf')">Ver</button>
+                </li>
+    
+                <li>
+                    <div class="channel-info">
+                        <img class="channel-logo" src="https://upload.wikimedia.org/wikipedia/commons/thumb/d/d9/LaLiga_Hypermotion_2023_Vertical_Logo.svg/512px-LaLiga_Hypermotion_2023_Vertical_Logo.svg.png?20230705085218" alt="Logo Liga Hipermotion">
+                        <span class="channel-name">Liga Hypermotion2</span>
+                    </div>
+                    <button class="channel-button" onclick="openUrl('acestream://4c46585214b23b1d802ef2168060c7649a3894cf')">Ver</button>
+                </li>
+    
+                <li>
+                    <div class="channel-info">
+                        <img class="channel-logo" src="https://www.movistarplus.es/recorte/m-NEO/canal/MLIGS2.png" alt="Logo DAZN LaLiga">
+                        <span class="channel-name">DAZN LaLiga</span>
+                    </div>
+                    <button class="channel-button" onclick="openUrl('acestream://d81b4f2f3fde433539c097b2edc9b587ca47b087')">Ver</button>
+                </li>
+                <li>
+                    <div class="channel-info">
+                        <img class="channel-logo" src="https://www.movistarplus.es/recorte/m-NEO/canal/MLIG1.png" alt="Logo Movistar Laliga2">
+                        <span class="channel-name">Movistar Laliga2</span>
+                    </div>
+                    <button class="channel-button" onclick="openUrl('acestream://37d42d2b5d2278e6bb5810329a5f220867b3cf0c')">Ver</button>
+                </li>
+                <li>
+                    <div class="channel-info">
+                        <img class="channel-logo" src="https://upload.wikimedia.org/wikipedia/commons/thumb/e/ec/Movistar_Liga_de_Campeones.svg/1200px-Movistar_Liga_de_Campeones.svg.png" alt="Logo Liga de Campeones">
+                        <span class="channel-name">Liga de Campeones</span>
+                    </div>
+                    <button class="channel-button" onclick="openUrl('acestream://931b1984badcb821df7b47a66ac0835ac871b51c')">Ver</button>
+                </li>
+    
+                <li>
+                    <div class="channel-info">
+                        <img class="channel-logo" src="https://www.movistarplus.es/recorte/m-NEO/canal/CHAP1.png" alt="Logo Liga de Campeones">
+                        <span class="channel-name">Liga de Campeones2</span>
+                    </div>
+                    <button class="channel-button" onclick="openUrl('acestream://fc2fe31b0bce25e2dc7ab4d262bf645e2be5a393')">Ver</button>
+                </li>
+    
+                <li>
+                    <div class="channel-info">
+                        <img class="channel-logo" src="http://one-iptv.com/imageslogo/MLaLiga.es.png" alt="Logo LigaTVBAR">
+                        <span class="channel-name">LigaTVBAR</span>
+                    </div>
+                    <button class="channel-button" onclick="openUrl('acestream://aa82e7d4f03061f2144a2f4be22f2e2210d42280')">Ver</button>
+                </li>
+                <li>
+                    <div class="channel-info">
+                        <img class="channel-logo" src="https://img.sport-tv-guide.live/images/tv-station-dazn-1-es-2510.png" alt="Logo DAZN1">
+                        <span class="channel-name">DAZN1</span>
+                    </div>
+                    <button class="channel-button" onclick="openUrl('acestream://8ca07071b39185431f8e940ec98d1add9e561639')">Ver</button>
+                </li>
+                <li>
+                    <div class="channel-info">
+                <img class="channel-logo" src="https://www.movistarplus.es/recorte/m-NEO/canal/DAZNL2.png" alt="Logo DAZN LaLiga 2">
+                        <span class="channel-name">DAZN Laliga2</span>
+                    </div>
+                    <button class="channel-button" onclick="openUrl('acestream://7aa402bab9fff43258fbcf401881a39475f30aaf')">Ver</button>
+                </li>
+               
+                <li>
+                    <div class="channel-info">
+                    <img class="channel-logo" src="https://www.movistarplus.es/recorte/m-NEO/canal/DAZNL3.png" alt="Logo DAZN LaLiga 3">
+                            <span class="channel-name">DAZN Laliga3</span>
+                        </div>
+                        <button class="channel-button" onclick="openUrl('acestream://7aa402bab9fff43258fbcf401881a39475f30aaf')">Ver</button>
+                    </li>
+                    
+    
+                        <li>
+    
+                            <div class="channel-info">
+                            <img class="channel-logo" src="https://upload.wikimedia.org/wikipedia/commons/thumb/e/e4/DAZN_F1_logo.svg/1200px-DAZN_F1_logo.svg.png" alt="Logo DAZN F1">
+                                    <span class="channel-name">DAZN F1</span>
+                                </div>
+                                <button class="channel-button" onclick="openUrl('acestream://9dad717d99b29a05672166258a77c25b57713dd5')">Ver</button>
+                            </li>
+    
+            
+        </div>
+            <!-- Lista de canales aquí -->
+        </ul>
+    </div>
+
+    <script>
+        function login() {
+            var usernameInput = document.getElementById("username").value;
+            var passwordInput = document.getElementById("password").value;
+            var loginButton = document.getElementById("loginButton");
+
+            if (usernameInput === "TXETXU" && passwordInput === "0114") {
+                document.getElementById("message").innerHTML = "Inicio de sesión exitoso. Redirigiendo...";
+                document.getElementById("loginForm").style.display = "none";
+                document.getElementById("loggedInContent").style.display = "block";
+            } else {
+                document.getElementById("message").innerHTML = "Credenciales incorrectas. Intente de nuevo.";
+            }
+        }
+    </script>
+</body>
+</html>
